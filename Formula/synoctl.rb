@@ -5,20 +5,20 @@
 class Synoctl < Formula
   desc "Command Line Interface for devices running Synology DSM"
   homepage "https://github.com/LukeWinikates/synology-go"
-  version "0.0.13"
+  version "0.0.14"
 
   on_macos do
     on_intel do
-      url "https://github.com/LukeWinikates/synology-go/releases/download/0.0.13/synoctl_Darwin_x86_64.tar.gz"
-      sha256 "51fec8546ce7030360436a31f35fd7fb9563768528debf9caaea93bc94c56e97"
+      url "https://github.com/LukeWinikates/synology-go/releases/download/v0.0.14/synoctl_Darwin_x86_64.tar.gz"
+      sha256 "9c53cc743ddefba709d13e572168c057d9d1362629042805a1360ac3e164c325"
 
       def install
         bin.install "synoctl"
       end
     end
     on_arm do
-      url "https://github.com/LukeWinikates/synology-go/releases/download/0.0.13/synoctl_Darwin_arm64.tar.gz"
-      sha256 "048f6e4fdc91b9414eb6b6b6a26d6fb42bd7d13c19f4ac5ec59cbb3663f14781"
+      url "https://github.com/LukeWinikates/synology-go/releases/download/v0.0.14/synoctl_Darwin_arm64.tar.gz"
+      sha256 "a24d6bb16a4fa63767c6454056b116ea159952a8441a2d0f6570a78f45c048cd"
 
       def install
         bin.install "synoctl"
@@ -29,8 +29,8 @@ class Synoctl < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/LukeWinikates/synology-go/releases/download/0.0.13/synoctl_Linux_x86_64.tar.gz"
-        sha256 "b8f045b3078400562c3a3cda002daf0efbd2d7a3277cf88461c267133f1b6a1b"
+        url "https://github.com/LukeWinikates/synology-go/releases/download/v0.0.14/synoctl_Linux_x86_64.tar.gz"
+        sha256 "111899b44668362244c73424b12ccb453cbc2244d24d7ff42d97ccb70ed342ee"
 
         def install
           bin.install "synoctl"
@@ -39,8 +39,8 @@ class Synoctl < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/LukeWinikates/synology-go/releases/download/0.0.13/synoctl_Linux_arm64.tar.gz"
-        sha256 "e8919d3a6d0bb82066599411b274c041e061fd73246198643f4e44756d1ea53f"
+        url "https://github.com/LukeWinikates/synology-go/releases/download/v0.0.14/synoctl_Linux_arm64.tar.gz"
+        sha256 "6f292f93c8f20b81f422a10bbfc8062d3164198d2702967bc0d29d4e35614569"
 
         def install
           bin.install "synoctl"
