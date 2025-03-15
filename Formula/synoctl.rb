@@ -27,24 +27,20 @@ class Synoctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/LukeWinikates/synology-go/releases/download/0.0.17/synoctl_Linux_x86_64.tar.gz"
-        sha256 "6c79441e7d9cb9427f3332ab7a5ef0ad29b1c837965b2e6bd62afc9dabbecacb"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/LukeWinikates/synology-go/releases/download/0.0.17/synoctl_Linux_x86_64.tar.gz"
+      sha256 "6c79441e7d9cb9427f3332ab7a5ef0ad29b1c837965b2e6bd62afc9dabbecacb"
 
-        def install
-          bin.install "synoctl"
-        end
+      def install
+        bin.install "synoctl"
       end
     end
-    if Hardware::CPU.arm?
-      if Hardware::CPU.is_64_bit?
-        url "https://github.com/LukeWinikates/synology-go/releases/download/0.0.17/synoctl_Linux_arm64.tar.gz"
-        sha256 "08836640a0a8e4129bcc395bb07efda7ef81a7e05633f33d96e513d3e8f5e5df"
+    if Hardware::CPU.arm && Hardware::CPU.is_64_bit?
+      url "https://github.com/LukeWinikates/synology-go/releases/download/0.0.17/synoctl_Linux_arm64.tar.gz"
+      sha256 "08836640a0a8e4129bcc395bb07efda7ef81a7e05633f33d96e513d3e8f5e5df"
 
-        def install
-          bin.install "synoctl"
-        end
+      def install
+        bin.install "synoctl"
       end
     end
   end
